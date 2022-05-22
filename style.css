@@ -1,0 +1,121 @@
+body{
+    background-color: #1a237e   ;
+    display: flex;
+    justify-content: center;
+}
+p{
+    font-size: 40px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: aliceblue;
+    text-decoration:overline  dotted;
+    text-decoration-color: aliceblue;
+}
+
+.todo-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;   
+}
+.input {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+   align-items: center;
+}
+.form-control {
+    border-radius: 1px ;
+    border-color: #90caf9;
+    box-shadow: 0px 0px  15px #111225 ;
+    border-width: 0px;
+    background-color: #90caf9;
+    text-align: center;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 30px;
+    width: 300px;
+    display: flex;
+}
+
+.add .material-icons {
+    color: #26c6da;
+    cursor: pointer;
+    display: flex;
+    font-size: 40px;
+    padding-left: 20px;
+    
+}
+li{
+    display: flex;
+    flex-direction: row;  
+    overflow:hidden;
+
+}
+.second-icon{
+    color: #f4ff81;
+    cursor: pointer;
+    display: flex;
+    padding-left: 20px;
+    margin-top: 10px;
+}
+.todo-list {
+    padding-left: 0px;
+}
+.left-cont {
+    border: #f4ff81;
+    border-radius: 2px;
+    border-width: 2px;
+    border-style: solid;
+    width: 300px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    color:#e4e8bd;
+    margin-bottom: 15px;
+}
+.left-cont input{
+    display: none;
+    cursor: pointer;
+
+}
+.left-cont label{
+    cursor: pointer;
+    position: relative;
+}
+.label:before{
+    content: '';
+    padding: 9px;
+    display: inline-block;
+    position: relative;
+    background: #d7b921;
+    border-radius: 2px;
+    vertical-align: middle;
+   
+    margin: 8px 10px 8px 10px;
+
+}
+.left-cont input:checked + label::before{
+    background: #4f79f9;
+}
+
+.left-cont input:checked + label::after{
+    content: ' ';
+    position: absolute;
+    display: inline-block;
+    top: 5px;
+    left: 15.5px;
+    width: 4px;
+    height: 10px;
+    border: solid #512da8;
+    border-width: 0px 3px 3px 0px;
+    transform: rotate(45deg);
+}
+.remove{
+    color: #e4e8bd;
+    cursor: pointer;
+    line-height: 1;
+    transform: translateY(48px);
+    transition: .5s;
+}
+.remove.active{
+    transform: translateY(0px);
+    transition: .5s;
+}
